@@ -1,0 +1,44 @@
+{% extends "layouts.html" %}
+
+{% block title %}Kontaktai{% endblock %}
+
+{% block kontaktai %}
+<div class="fonas">
+    <div class="foto4a"></div>
+    <div class="foto5a"></div>
+    <div class="tekstas0">Mus galite rasti adresu: Pilies g. 30, Kaunas <br> Susisiekti numeriu: +37063454789 <br>
+        Mūsų el.pašto adresas: tiputapu@gmail.com
+    </div>
+</div>
+<div class="forma">
+    <h1> Susisiekite su mumis </h1>
+</div>
+<form method="POST">
+    <input name="vardas" type="text" placeholder="Jūsų vardas">
+    {% if "vardas" in errors %}
+    <span class="klaida">{{ errors["vardas"] }}</span>
+    {% endif %}
+
+    <input name="pastas" type="email" placeholder="Jūsų el. pašto adresas">
+    {% if "pastas" in errors %}
+    <span class="klaida">{{ errors["pastas"] }}</span>
+    {% endif %}
+
+    <textarea name="zinute" placeholder="Žinutė mums" style="resize: none;"></textarea>
+    {% if "zinute" in errors %}
+    <span class="klaida">{{ errors["zinute"] }}</span>
+    {% endif %}
+
+    <button type="submit">Siųsti</button>
+
+
+    {% if sekmingai_issiusta %}
+    <script>
+    alert("Jūsų žinutė sėkmingai išsiųsta!");
+
+    </script>
+    {% endif %}
+</form>
+{% endblock %}
+
+

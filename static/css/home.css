@@ -1,0 +1,748 @@
+.pavadinimas {
+ position: absolute;
+width: 327px;
+height: 56px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 46.0547px;
+line-height: 56px;
+/* identical to box height */
+
+text-align: center;
+
+color: #000000;
+}
+
+nav {
+    width: 1920px;
+    position: relative;
+    margin: 0 auto;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 5px 100px 5px 0;
+    text-align: right;
+}
+
+nav ul li {
+    display: inline-block;
+    padding-left: 20px;
+}
+
+.nav_link {
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 200;
+font-size: 30px;
+line-height: 29px;
+text-align: center;
+    color: black;
+}
+
+/* pagrindionio puslapio dizainas*/
+
+.content {
+    text-align: center;
+}
+
+.content1 {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.content2 {
+    position: relative;
+    margin-top: -600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+}
+
+.foto1a {
+    position: relative;
+    border-radius: 20px 0 0 20px;
+    width: 642px;
+    height: 890px;
+    top: 132px;
+
+    display: inline-block;
+    background: url("/static/foto1.png");
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+}
+
+.foto2a {
+    position: relative;
+    width: 642px;
+    height: 890px;
+
+    top: 132px;
+    display: inline-block;
+    background: url("/static/foto2.png");
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+}
+
+.foto3a {
+    position: relative;
+    border-radius: 0 20px 20px 0;
+    width: 642px;
+    height: 890px;
+    top: 135px;
+    display: inline-block;
+    background: url("/static/foto3.png");
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+}
+
+.tekstas {
+     text-align: center;
+    font-family: 'Inter';
+    font-style: italic;
+    font-size: 28px;
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 500px;
+}
+
+div .main {
+    width: 100%;
+}}
+
+/* apie mus puslapio dizainas*/
+
+.content3 {
+    text-align: center;
+}
+
+.content4 {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.foto4a{
+    position: absolute;
+width: 1920px;
+height: 949px;
+left: 0px;
+top: 135px;
+background-repeat: no-repeat;
+
+background: url("/static/foto4.png");
+}
+
+.foto6a {
+  position: absolute;
+  width: 847px;
+  height: 656px;
+  left: 75px;
+  top: 231px;
+
+  background-repeat: no-repeat;
+
+background: url("/static/foto6.png");
+}
+
+.tekstas1{
+    position: absolute;
+width: 769px;
+height: 609px;
+left: 1051px;
+top: 331px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 40px;
+line-height: 48px;
+text-align: center;
+
+color: #000000;
+}
+
+.tekstas2{
+    position: absolute;
+width: 769px;
+height: 85px;
+left: 1035px;
+top: 400px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 30px;
+line-height: 58px;
+text-align: center;
+
+color: #000000;
+}
+
+/* kelioniu puslapio dizainas*/
+
+.foto16a{
+    position: absolute;
+width: 1920px;
+height: 1699px;
+left: 0px;
+top: 135px;
+
+background: url("/static/foto16.png");
+}
+
+.antrastine1{
+    position: absolute;
+width: 1796px;
+height: 73px;
+left: 81px;
+top: 192px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 29px;
+text-align: center;
+
+color: #000000;
+}
+
+.lietuva{
+    position: absolute;
+width: 86px;
+height: 29px;
+left: 260px;
+top: 345px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 29px;
+/* identical to box height */
+
+text-align: center;
+
+color: #0E0D0D
+}
+
+
+.foto7a {
+  position: absolute;
+width: 402px;
+height: 140px;
+left: 102px;
+top: 398px;
+
+background: url("/static/foto7.png");
+}
+
+.kvadratas1{
+    position: absolute;
+width: 402px;
+height: 430px;
+left: 102px;
+top: 398px;
+
+background: #F5F5F5;
+}
+
+.tekstas10{
+    position: absolute;
+width: 388px;
+height: 213px;
+left: 110px;
+top: 551px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 19px;
+text-align: center;
+
+color: #000000;
+}
+
+.foto8a{
+    position: absolute;
+width: 402px;
+height: 136px;
+left: 102px;
+top: 855px;
+
+background: url("/static/foto8.png");
+}
+
+.kvadratas2{
+    position: absolute;
+width: 402px;
+height: 430px;
+left: 102px;
+top: 855px;
+
+background: #F5F5F5;
+}
+
+.tekstas11{
+    position: absolute;
+width: 388px;
+height: 262px;
+left: 110px;
+top: 1004px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 19px;
+text-align: center;
+
+color: #000000;
+}
+
+.foto9a{
+    position: absolute;
+width: 402px;
+height: 139px;
+left: 103px;
+top: 1317px;
+
+background: url("/static/foto9.png");
+}
+
+.kvadratas3{
+    position: absolute;
+width: 402px;
+height: 430px;
+left: 103px;
+top: 1317px;
+
+background: #F5F5F5;
+}
+
+.tekstas12{
+    position: absolute;
+width: 388px;
+height: 255px;
+left: 110px;
+top: 1470px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 19px;
+text-align: center;
+
+color: #000000;
+}
+
+.latvija{
+    position: absolute;
+width: 146px;
+height: 25px;
+left: 939px;
+top: 343px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 29px;
+
+color: #000000;
+}
+
+.foto10a{
+    position: absolute;
+width: 402px;
+height: 140px;
+left: 768px;
+top: 398px;
+
+background: url("/static/foto10.png");
+}
+
+.kvadratas4{
+    position: absolute;
+width: 402px;
+height: 430px;
+left: 768px;
+top: 398px;
+
+background: #F5F5F5;
+}
+
+.tekstas13{
+    position: absolute;
+width: 391px;
+height: 241px;
+left: 775px;
+top: 551px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 19px;
+text-align: center;
+
+color: #000000;
+}
+
+.foto11a{
+    position: absolute;
+width: 404px;
+height: 140px;
+left: 768px;
+top: 855px;
+
+background: url("/static/foto11.png");
+}
+
+.kvadratas5{
+    position: absolute;
+width: 404px;
+height: 430px;
+left: 768px;
+top: 855px;
+
+background: #F5F5F5;
+}
+
+.tekstas14{
+    position: absolute;
+width: 386px;
+height: 224px;
+left: 775px;
+top: 1003px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 19px;
+text-align: center;
+
+color: #000000;
+}
+
+.foto12a{
+    position: absolute;
+width: 394px;
+height: 140px;
+left: 775px;
+top: 1316px;
+
+background: url("/static/foto12.png");
+}
+
+.kvadratas6{
+    position: absolute;
+width: 394px;
+height: 430px;
+left: 775px;
+top: 1317px;
+
+background: #F5F5F5;
+}
+
+.tekstas15{
+    position: absolute;
+width: 380px;
+height: 291px;
+left: 782px;
+top: 1470px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 19px;
+text-align: center;
+
+color: #000000;
+}
+
+.estija{
+    position: absolute;
+width: 127px;
+height: 25px;
+left: 1601px;
+top: 343px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 29px;
+
+color: #000000;
+}
+
+.foto13a{
+    position: absolute;
+width: 402px;
+height: 134px;
+left: 1434px;
+top: 398px;
+
+background: url("/static/foto13.png");
+}
+
+.kvadratas7{
+    position: absolute;
+width: 402px;
+height: 430px;
+left: 1434px;
+top: 398px;
+
+background: #F5F5F5;
+}
+
+.tekstas16{
+    position: absolute;
+width: 388px;
+height: 252px;
+left: 1434px;
+top: 551px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 19px;
+text-align: center;
+
+color: #000000;
+}
+
+.foto14a{
+    position: absolute;
+width: 402px;
+height: 140px;
+left: 1434px;
+top: 855px;
+
+background: url("/static/foto14.png");
+}
+
+.kvadratas8{
+    position: absolute;
+width: 402px;
+height: 430px;
+left: 1434px;
+top: 855px;
+
+background: #F5F5F5;
+}
+
+.tekstas17{
+    position: absolute;
+width: 382px;
+height: 265px;
+left: 1444px;
+top: 1003px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 19px;
+text-align: center;
+
+color: #000000;;
+}
+
+.foto15a{
+    position: absolute;
+width: 404px;
+height: 140px;
+left: 1432px;
+top: 1317px;
+
+background: url("/static/foto15.png");
+}
+
+.kvadratas9{
+    position: absolute;
+width: 404px;
+height: 430px;
+left: 1432px;
+top: 1317px;
+
+background: #F5F5F5;
+}
+
+.tekstas18{
+    position: absolute;
+width: 387px;
+height: 254px;
+left: 1439px;
+top: 1470px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 19px;
+text-align: center;
+
+color: #000000;
+}
+
+/* kontaktu puslapio dizainas*/
+
+.foto4a{
+    position: absolute;
+width: 1920px;
+height: 949px;
+left: 0px;
+top: 135px;
+
+background: url("/static/foto4.png");
+}
+
+.foto5a {
+    position: absolute;
+width: 624px;
+height: 774px;
+left: 99px;
+top: 220px;
+background: url("/static/foto5.png");
+}
+
+.forma{
+    position: absolute;
+width: 475px;
+height: 56px;
+left: 899px;
+top: 271px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 56px;
+/* identical to box height */
+
+text-align: center;
+
+color: #000000;
+}
+
+.tekstas0{
+    position: absolute;
+height: 282px;
+width: 377px;
+left: 1499px;
+top: 459px;
+
+font-family: 'Inter';
+font-style: normal;
+font-size: 32px;
+font-weight: 400;
+line-height: 39px;
+text-align: center;
+
+color: #000000;
+}
+
+input{
+
+border: solid 1px #999;
+background: #D9D9D9;
+}
+
+input[type="text"]{
+  position: absolute;
+height: 69px;
+width: 579px;
+left: 849px;
+top: 379px;
+background: #D9D9D9;
+font-family: 'Inter';
+font-style: normal;
+font-size: 24px;
+font-weight: 300;
+line-height: 29px;
+display: flex;
+text-align: left;
+}
+
+input[type="text"] + .klaida {
+  position: absolute;
+  color: red;
+  font-size: 16px;
+  top: calc(379px + 69px + 10px); /* nustatykite atstumą nuo textarea viršaus krašto */
+  left: 849px;
+  }
+
+input[type="email"]{
+    position: absolute;
+height: 69px;
+width: 579px;
+left: 849px;
+top: 480px;
+font-family: 'Inter';
+font-style: normal;
+font-size: 24px;
+font-weight: 300;
+line-height: 29px;
+text-align: left;
+background: #D9D9D9;
+}
+
+input[type="email"] + .klaida {
+  position: absolute;
+  color: red;
+  font-size: 16px;
+  top: calc(480px + 69px + 10px); /* nustatykite atstumą nuo textarea viršaus krašto */
+  left: 849px;
+  }
+
+textarea{
+    position: absolute;
+height: 233px;
+width: 581px;
+left: 849px;
+top: 579px;
+background: #D9D9D9;
+vertical-align: top;
+font-family: 'Inter';
+font-style: normal;
+font-size: 24px;
+font-weight: 300;
+}
+
+button[type="submit"] {
+    position: absolute;
+height: 67px;
+width: 382px;
+left: 945px;
+top: 860px;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 29px;
+text-align: center;
+
+background: #F8C9C9;
+}
+
+textarea + .klaida {
+  position: absolute;
+  color: red;
+  font-size: 16px;
+  top: calc(579px + 233px + 10px); /* nustatykite atstumą nuo textarea viršaus krašto */
+  left: 849px;
+  }

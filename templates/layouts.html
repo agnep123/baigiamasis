@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--    <link rel="stylesheet" href='{{ url_for("static", filename="css/layout.css") }}'/>-->
+    <link rel="stylesheet" href='{{ url_for("static", filename="css/home.css") }}'/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}Tiputapu{% endblock %}</title>
+</head>
+<body>
+<div class="main">
+    <div class="navigation" style="z-index: 50">
+        <nav>
+            <ul>
+                <h1 class="pavadinimas">TipuTapu</h1>
+                <li><a href="/" class="nav_link">Pagrindinis</a></li>
+                <li><a href="/apie_mus" class="nav_link">Apie mus</a></li>
+                <li><a href="/keliones" class="nav_link">Kelionės</a></li>
+                <li><a href="/kontaktai" class="nav_link">Kontaktai</a></li>
+            </ul>
+        </nav>
+    </div>
+
+</div>
+
+    {% block pagrindinis %}{% endblock %}
+
+    {% block apie_mus %}{% endblock %}
+
+    {% block keliones %}{% endblock %}
+
+    {% block kontaktai %}{% endblock %}
+</body>
+</html>
