@@ -1,5 +1,4 @@
 from flask import Flask, render_template, request
-    #redirect, url_for, flash
 import re
 import datetime
 
@@ -33,6 +32,7 @@ def kontaktai():
 
 
 is_testing = True
+
 
 @app.route('/kontaktai', methods=['GET', 'POST'])
 def handle_kontaktai_form():
@@ -70,10 +70,6 @@ def handle_kontaktai_form():
             return render_template('kontaktai.html', error_message=error_message)
     else:
         return render_template('kontaktai.html')
-
-
-# else:
-# return render_template('kontaktai.html')
 
 
 if __name__ == "__main__":
