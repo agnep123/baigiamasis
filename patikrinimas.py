@@ -54,7 +54,7 @@ class TestApp(unittest.TestCase):
         self.assertIn('*Vardo laukelyje negali būti simbolių', response.data)
 
     def test_kontaktai_form_invalid7(self):
-        response = self.app.post('/kontaktai', data=dict(vardas='labas', pastas='gmail@12', zinute='labas'),
+        response = self.app.post('/kontaktai', data=dict(vardas='labas', pastas='gmail@12.com', zinute='labas'),
                                  follow_redirects=True)
         self.assertEqual(response.status_code, 200)
         self.assertIn('*Prašome įvesti teisingą el.pašto adresą', response.data)
