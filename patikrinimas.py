@@ -1,47 +1,75 @@
 import unittest
-from main import handle_kontaktai_form, app
+from main import app
 
 
-class TestHandleKontaktaiForm(unittest.TestCase):
+class TestApp(unittest.TestCase):
 
-    def test_kontaktai(self):
-        tester = app.test_client(self)
-        response = tester.get('/kontaktai', content_type='html/text')
+    def setUp(self):
+        app.testing = True
+        self.app = app.test_patikrinimas()
+
+    def test_kontaktai_form(self):
+        response = self.app.post('/kontaktai', data=dict(vardas='Vardenis', pastas='vardas@pastas.lt', zinute='Žinutė'),
+                                 follow_redirects=True)
         self.assertEqual(response.status_code, 200)
-        self.assertTrue(b'Kontaktai' in response.data)
+        self.assertIn('Jūsų žinutė buvo sėkmingai išsiųsta.', response.data)
 
-    def test_invalid_vardas(self):
-        with self.assertRaises(ValueError):
-            handle_kontaktai_form("1234")  # vardas netinka - turi būti tik raidės
+    def test_kontaktai_form_invalid(self):
+        response = self.app.post('/kontaktai', data=dict(vardas='', pastas='', zinute=''), follow_redirects=True)
+        self.assertEqual(response.status_code, 200)
+        self.assertIn('*Prašome įvesti vardą', response.data)
+        self.assertIn('*Prašome įvesti el. pašto adresą', response.data)
+        self.assertIn('*Prašome įvesti žinutę', response.data)
 
-    def test_valid_vardas(self):
-        # Patikriname, kad funkcija negeneruoja jokios išimties ir grąžina teisingą reikšmę
-        result = handle_kontaktai_form("Jonas")
-        self.assertEqual(result, None)
+    def test_kontaktai_form_invalid1(self):
+        response = self.app.post('/kontaktai', data=dict(vardas='labas', pastas='labas@gmail.com', zinute=''),
+                                 follow_redirects=True)
+        self.assertEqual(response.status_code, 200)
+        self.assertIn('*Prašome įvesti vardą', response.data)
+        self.assertIn('*Prašome įvesti el. pašto adresą', response.data)
+        self.assertIn('*Prašome įvesti žinutę', response.data)
 
-        # Patikriname, kad funkcija negeneruoja jokios išimties ir grąžina teisingą reikšmę
-        result = handle_kontaktai_form("Petras")
-        self.assertEqual(result, None)
+    def test_kontaktai_form_invalid2(self):
+        response = self.app.post('/kontaktai', data=dict(vardas='labas', pastas='', zinute=''), follow_redirects=True)
+        self.assertEqual(response.status_code, 200)
+        self.assertIn('*Prašome įvesti el. pašto adresą', response.data)
+        self.assertIn('*Prašome įvesti žinutę', response.data)
 
-    def test_invalid_email_format(self):
-        with self.assertRaises(ValueError):
-            handle_kontaktai_form("Jonas", "invalid_email", "Test message")
+    def test_kontaktai_form_invalid3(self):
+        response = self.app.post('/kontaktai', data=dict(vardas='labas', pastas='', zinute='labas'),
+                                 follow_redirects=True)
+        self.assertEqual(response.status_code, 200)
+        self.assertIn('*Prašome įvesti el. pašto adresą', response.data)
 
-    def test_valid_email_format(self):
-        result = handle_kontaktai_form("Jonas", "valid_email@example.com", "Test message")
-        self.assertEqual(result, None)
+    def test_kontaktai_form_invalid5(self):
+        response = self.app.post('/kontaktai', data=dict(vardas='lab1234', pastas='labas@gmail.coom', zinute='labas'),
+                                 follow_redirects=True)
+        self.assertEqual(response.status_code, 200)
+        self.assertIn('*Vardo laukelyje negali būti skaičių', response.data)
 
-    def test_empty_message(self):
-        with self.assertRaises(ValueError):
-            handle_kontaktai_form("Jonas", "valid_email@example.com", "")
+    def test_kontaktai_form_invalid6(self):
+        response = self.app.post('/kontaktai', data=dict(vardas='lab/.', pastas='labas@gmail.com', zinute='labas'),
+                                 follow_redirects=True)
+        self.assertEqual(response.status_code, 200)
+        self.assertIn('*Vardo laukelyje negali būti simbolių', response.data)
 
-    def test_empty_email(self):
-        with self.assertRaises(ValueError):
-            handle_kontaktai_form("Jonas", "", "Test message")
+    def test_kontaktai_form_invalid7(self):
+        response = self.app.post('/kontaktai', data=dict(vardas='labas', pastas='gmail@12', zinute='labas'),
+                                 follow_redirects=True)
+        self.assertEqual(response.status_code, 200)
+        self.assertIn('*Prašome įvesti teisingą el.pašto adresą', response.data)
 
-    def test_long_message(self):
-        with self.assertRaises(ValueError):
-            handle_kontaktai_form("Jonas", "valid_email@example.com", "a" * 1001)
+    def test_kontaktai_form_invalid8(self):
+        response = self.app.post('/kontaktai', data=dict(vardas='labas', pastas='gmail@gmail12', zinute='labas'),
+                                 follow_redirects=True)
+        self.assertEqual(response.status_code, 200)
+        self.assertIn('*Prašome įvesti teisingą el.pašto adresą', response.data)
+
+    def test_kontaktai_form_invalid9(self):
+        response = self.app.post('/kontaktai', data=dict(vardas='labas', pastas='gmail@12er.sf', zinute='labas'),
+                                 follow_redirects=True)
+        self.assertEqual(response.status_code, 200)
+        self.assertIn('*Prašome įvesti teisingą el.pašto adresą', response.data)
 
 
 if __name__ == '__main__':

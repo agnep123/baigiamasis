@@ -1,2 +1,0 @@
-"# baigiamasis" 
-"# baigiamasis" 
